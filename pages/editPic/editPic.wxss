@@ -1,0 +1,46 @@
+page,container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container{
+  background-color: #F5F5F5;
+  position: relative;
+}
+.imgDiv{
+ width: 89%; height: 50%;
+ margin-top:14%; 
+ background-color: white;
+ border-radius:22px;
+ position: relative;
+}
+.firstCanvas{
+  width: 100%; height: 100%;
+}
+.user_input{
+  position: absolute;
+  bottom:12%;
+  width: 62%;
+  margin: 0px  19%;
+  height: 11%;
+
+}
+.input{
+  border: 2px solid #F7B46D;
+  border-radius:5px;
+  height: 100%;
+  padding: 2%;
+}
+.submit_button{
+  border: 2px solid #F7B46D;
+   border-radius:5px;
+  width: 40%;
+  height:1.5rem;
+  line-height:1.5rem;
+  bottom: 28%;
+  position: absolute;
+  background-color: white;
+  font-size: 0.9rem;
+  color:#F7B46D;
+  text-align:center;
+}

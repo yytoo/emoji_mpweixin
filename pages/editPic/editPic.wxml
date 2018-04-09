@@ -1,0 +1,8 @@
+<navigator url="../index/index" hover-class="navigator-hover"></navigator>
+<view class="container">
+  <view class='imgDiv'>
+    <canvas class="firstCanvas" canvas-id="firstCanvas"></canvas>
+   <view  class="user_input"><input class="input"  placeholder="{{default_text}} " bindblur="setValue"  confirm-type="send" bindconfirm="setValue" maxlength="17" value="{{user_value}}"/></view>
+  </view>
+   <button class="submit_button" bindtap="saveImg"> 完成并发送微信</button>
+</view>

@@ -1,0 +1,46 @@
+<view class="container">
+
+  <!--搜索输入框-->
+  <view class="search_view">
+      <image src="/images/search.png" class="search_img" style="display:{{searchIcon}};"></image>
+      <input   style="margin-top:2rpx;color:grey" bindfocus="focusSearch"   border-radius="10px"  value="{{searchKey}}" class="search_input white_bg" bindblur="blurSearch" confirm-type="search" bindconfirm="search"/>
+  </view>
+
+  <!--tag导航滑动区（双状态）-->
+  <view class="list_view white_bg" >
+    <view class="scroll_view " style="display:{{right_arrow}}" >
+      <scroll-view  scroll-x="true">
+        <view wx:for="{{tagList}}" wx:for-index="idx" wx:for-item="itemName" class="scroll_ele">
+          <view  bindtap="selectTag" data-tagId="{{itemName.tagId}}">{{itemName.tagName}}</view>
+        </view>
+    </scroll-view>
+    </view>
+    <view   class="scroll_view"  style="display:{{down_arrow}};">
+      <view style="margin-left:95rpx;margin-top:20rpx;"  >可以按照以下分类进行查找</view>
+    </view>
+    <view class='right_img' bindtap='showList' style='display:{{right_arrow}}'>
+    <image src="/images/right.png"  style="width:32rpx;height:40rpx;;margin-top:22rpx;margin-left:20rpx;"></image>
+    </view>
+    <view class='down_img' bindtap='showList' style='display:{{down_arrow}}'>
+      <image src="/images/down.png" style="width:40rpx;height:34rpx;margin-top:22rpx;margin-left:20rpx;"></image>
+    </view>
+  </view>
+  <!--tag导航展开区（默认隐藏）-->
+  <view class="tag_view">
+    <view wx:for="{{tagList}}" wx:for-index="idx" wx:for-item="itemName" class="detail_ele white_bg"  style='display:{{down_arrow}}'>
+      <view  bindtap="selectTag" data-tagId="{{itemName.tagId}}">{{itemName.tagName}}</view>
+    </view>
+  </view>
+
+  <!--图片列表显示区域，overflow:auto防止页面撑开,scroll-view必须固定明确的高度，否则无法触发bindscroll-->
+  <scroll-view  bindscroll="scroll" scroll-y="true" style="height:{{seeHeight}}rpx;overflow:auto;">
+    <view class="img_view white_bg">
+       <view wx:for="{{imgList}}" wx:for-index="index" wx:for-item="itemName"  >
+         <navigator url="../editPic/editPic?id={{itemName.imgId}}"  style='display:block' >
+          <image src="{{arry[index]?itemName.imgUrl:'/images/k4.jpg'}}" class="img_detail"></image>
+        </navigator>
+       </view>
+    </view >
+  </scroll-view >
+
+</view>

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/editPic/editPic"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFB86C",
+    "navigationBarTitleText": "崩坏3斗图表情包",
+    "navigationBarTextStyle": "white"
+   
+  }
+}
