@@ -4,6 +4,6 @@ App({
    
   },
   globalData: {
-    url: 'https://gamepaper.cn',
+    url: 'https://xxxx.xx',
   }
 })
